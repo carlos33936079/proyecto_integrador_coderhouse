@@ -1,0 +1,49 @@
+*{
+   
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main_header{
+    background-color: white;
+}
+
+.logo_index{
+    width: 90%;
+    z-index: 95;
+    height: 65%;
+}
+
+.navBar figure{
+    max-width: 225px;
+    width: 70%;
+    z-index: 100;
+    max-height: 65px;
+    align-self: center;
+    text-align: left;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navigation_bar{
+    display: block;
+    text-align: center;
+    width: 100%;
+    
+}
+.navigation_bar a{
+    text-decoration: none;
+    letter-spacing: 2.3px;
+    padding: 10px 26px;
+    color: #222222;
+
+}
