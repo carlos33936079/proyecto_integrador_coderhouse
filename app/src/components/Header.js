@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './headers/NavBar'
 import Logo from './headers/Logo'
-import CartWidget from './headers/CartWidget'
+
 
 function Header() {
   return (
@@ -9,7 +9,6 @@ function Header() {
           <div className="navBar">
             <Logo/>
             <NavBar/>
-            <CartWidget/>
           </div>   
       </header>
     

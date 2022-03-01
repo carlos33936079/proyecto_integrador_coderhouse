@@ -4,7 +4,7 @@ import ItemListContainer from './main/ItemListContainer'
 function Main() {
   return (
     <main className='container_main'>
-        <ItemListContainer/>
+        <ItemListContainer mensaje='Aqui va el item list container'/>
     </main>
   )
 }
