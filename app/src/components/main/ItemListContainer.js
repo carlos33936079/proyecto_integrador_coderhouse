@@ -1,15 +1,61 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import ItemList from './ItemList'
+import {useState, useEffect} from "react"
 
-function ItemListContainer({mensaje}) {
+let productList = [
+  {
+      id: 1,
+      name: "Nikon D7500",
+      stock: 20,
+      initial: 1,
+      image : "/images/products/nikond7500.jpg"
+  },
+  {
+      id: 2,
+      name: "Nikon D3500",
+      stock: 10,
+      initial: 1,
+      image : "/images/products/nikond3500.jpg"
+  },
+  {
+      id: 3,
+      name: "Canon EOS R5",
+      stock: 12,
+      initial: 1,
+      image : "/images/products/canon_eos_r5.jpg"
+  }
 
-const stock= 40
-const initial= 1
-const miOnAdd = () => {}
+]
+
+function ItemListContainer() {
+
+  const [loading, setLoading] = useState(true)
+  const [productos, setProductos] = useState([])
+
+useEffect(()=>{
+
+const promesa = new Promise((res,rej)=>{
+
+  setTimeout(() => {
+      res(productList)
+  }, 2000); 
+})
+promesa
+.then((respuesta)=>{
+  setProductos(productList) 
+})
+.catch((error404)=>{
+  console.log(error404)
+})
+.finally((fin)=>{
+  setLoading(false)   
+})
+})
+
 
   return (
     <div className='item_list'>
-        <ItemCount stock={stock} initial={initial} onAdd={miOnAdd}/>
+        <ItemList loading={loading} item={productos}/>
     </div>
   )
 }

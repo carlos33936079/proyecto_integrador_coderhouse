@@ -21,22 +21,20 @@ const clickDecrement = () => {
 }
 
   return (
-    <div className='container_card'>
-        <div className='container_card_image'>
-            <img className="card_image" src='/images/images_card/no_image.jpg' alt='Imagen'/>
-            <h3>Nombre Producto</h3>
-        </div>
+    
+        <React.Fragment>
         <div className='container_count'> 
         <div className='card_count'>
         <FontAwesomeIcon icon={faMinus} onClick={clickDecrement} />
         <p className='numero'>{count}</p>
         <FontAwesomeIcon icon={faPlus} onClick={clickIncrease}/>
         </div>
-        <p>/{props.stock}</p>
+        <p>/{props.stock} U. en stock</p>
         </div>
          <br />
         <button className='button_add' onClick={()=>alert('agregar')}>Agregar al carrito</button>
-    </div>
+        </React.Fragment>
+    
   )
 }
 
