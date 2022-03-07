@@ -30,12 +30,38 @@
   z-index: 95;
   height: 65%;
 }
-.container_header .navBar .navigation_bar {
+.navigation_bar {
   display: block;
   text-align: center;
   width: 100%;
 }
-.container_header .navBar .navigation_bar a {
+
+.navigation_BurgerBar .navigation_burger{
+  display: block;
+  cursor: pointer;
+ position: absolute;
+ right: 0%;
+}
+
+.navigation_BurgerBar{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 4%;
+  right: 2%;
+ 
+}
+
+.navigation_BurgerBar a{
+  text-decoration: none;
+  letter-spacing: 2.5px;
+  padding: 10px 26px;
+  color: #222222;
+  background-color: rgba(211, 211, 211, 0.541)
+
+  
+}
+.navigation_bar a {
   text-decoration: none;
   letter-spacing: 2.3px;
   padding: 10px 26px;
@@ -43,20 +69,27 @@
 }
 .container_header .navBar .cart_widget {
   width: 30%;
+  position: relative;
+  right: 10%;
 }
 
 .container_main {
   display: flex;
   width: 100%;
-  background-color: white;
-  padding: 10rem;
+  background-color:white;
+  padding: 3rem;
   justify-content: center;
-  
+  align-items: center;
   
 }
 .container_main .item_list {
+  width: 90%;
+  height: 90%;
   align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 3em;  
+
 }
 
 
@@ -69,6 +102,13 @@
   color: gray;
 }
 
+.iconMinus{
+ cursor: pointer;
+}
+
+.iconPlus{
+cursor: pointer;
+}
 
 .container_card{
  
@@ -81,11 +121,15 @@
   padding: 20px;
   width: 100%;
   text-align: center;
+ 
+  
 }
 
 .container_card_image{
-  width: 40%;
+  width: 7rem;
+  height: 11rem;
   padding-bottom: 30px;
+
 }
 
 .card_image{
@@ -97,7 +141,6 @@
  display: flex;
  background-color: white;
  box-shadow: 0px 0px 10px rgb(100,100,100);
- 
  
 }
 
@@ -112,10 +155,37 @@
  border:1px solid rgb(108, 158, 231);
  padding: 5px;
  box-shadow: 0px 0px 10px rgb(108, 158, 231);
+ cursor: pointer;
 
 }
 
 
-
+@media screen and (min-width: 1300px){
+  .container_main .item_list {
+    width: 90%;
+    height: 70%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 3em;  
+  }
+ 
+  .container_header .navBar .cart_widget {
+    width: 30%;
+    position: relative;
+    right: 1%;
+  }
+}
+@media screen and (max-width: 900px){
+  .container_main .item_list {
+    width: 70%;
+    height: 70%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 90% ;
+    
+  }
+  
+}
 
 /*# sourceMappingURL=styles.css.map */

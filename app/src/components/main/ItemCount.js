@@ -20,21 +20,19 @@ const clickDecrement = () => {
   }
 }
 
-  return (
-    
-        <React.Fragment>
+  return ( 
+        <>
         <div className='container_count'> 
         <div className='card_count'>
-        <FontAwesomeIcon icon={faMinus} onClick={clickDecrement} />
+        <div className='iconMinus'><FontAwesomeIcon icon={faMinus} onClick={clickDecrement} /></div>
         <p className='numero'>{count}</p>
-        <FontAwesomeIcon icon={faPlus} onClick={clickIncrease}/>
+        <div className='iconPlus'><FontAwesomeIcon icon={faPlus} onClick={clickIncrease}/></div>
         </div>
         <p>/{props.stock} U. en stock</p>
         </div>
          <br />
         <button className='button_add' onClick={()=>alert('agregar')}>Agregar al carrito</button>
-        </React.Fragment>
-    
+        </>   
   )
 }
 

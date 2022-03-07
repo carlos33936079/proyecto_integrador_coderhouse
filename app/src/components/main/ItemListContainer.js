@@ -23,7 +23,8 @@ let productList = [
       stock: 12,
       initial: 1,
       image : "/images/products/canon_eos_r5.jpg"
-  }
+  },
+
 
 ]
 

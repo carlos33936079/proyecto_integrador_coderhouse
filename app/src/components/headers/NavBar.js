@@ -1,22 +1,19 @@
 import React from 'react';
 import CartWidget from './CartWidget';
+import NavigationBar from './NavigationBar';
+import MenuResponsive from './MenuResponsive';
+import UseWindowDimensions from '../hook/UseWindowDimensions';
 
 function NavBar() {
+
+    const { width } = UseWindowDimensions();
+    let responsive = width<1300 ? true : false
+    
     return (       
         <>
-            <nav className="navigation_bar">
-                <a href="/#">Home</a>
-                <a href="/#">Trabajos</a>
-                <a href="/#">Servicios</a>
-                <a href="/#">Sobre Mí</a>
-                <a href="/#">Contacto</a>
-                <a href="/#">Iniciar Sesión</a>         
-            </nav>   
-            <CartWidget/>  
-        </>
-        
-           
+            {responsive ? <MenuResponsive/> : <NavigationBar/>}      
+            <CartWidget/>       
+        </>       
     );
   }
-
   export default NavBar;
