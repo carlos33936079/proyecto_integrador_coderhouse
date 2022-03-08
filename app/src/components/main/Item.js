@@ -3,7 +3,7 @@ import ItemCount from './ItemCount'
 
 function Item(props) {
 const miOnAdd = () => {}
-
+console.log(props.name)
   return (
     <div className='container_card'>
     <div className='container_card_image'>

@@ -94,20 +94,47 @@
 
 
 .container_count{
+ display: flex;
+ border: 1px solid rgb(108, 158, 231);
+margin-top: 100px;
+margin-right: 5%;
+margin-left: 5%;
+height: 40px;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0px 0px 10px rgb(108, 158, 231);
+;
+}
+.card_count{
   display: flex;
+  position: relative;
+  
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container_count p{
-  padding-left: 5px;
-  color: gray;
+
+.card_count p {
+  padding-left: 15px;
+  padding-right: 15px;
+  
 }
 
 .iconMinus{
+ display: flex;
  cursor: pointer;
+ border: 1px solid rgb(108, 158, 231);
+ background-color: rgb(108, 158, 231);
+ color: white;
+
 }
 
 .iconPlus{
 cursor: pointer;
+border: 1px solid rgb(108, 158, 231);
+background-color: rgb(108, 158, 231);
+color: white;
 }
 
 .container_card{
@@ -136,19 +163,9 @@ cursor: pointer;
   width: 90%;
 }
 
-.card_count{
- border:1px solid grey;
- display: flex;
- background-color: white;
- box-shadow: 0px 0px 10px rgb(100,100,100);
- 
-}
 
-.card_count p {
-  padding-left: 15px;
-  padding-right: 15px;
-  
-}
+
+
 
 .button_add{
  background-color: white;
@@ -159,6 +176,111 @@ cursor: pointer;
 
 }
 
+.itemDetailContainer_container{
+  width: 100%;
+  height: 80%;
+  margin-top: 800px;
+  
+  display: flex;
+  position: absolute;
+}
+.itemDetail_container{
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  column-gap: 1em;
+  width: 70%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.itemDetail_foto{
+  
+  width: 100%;
+  height: 50%;
+  
+}
+.itemDetail_imagenfoto{
+  width: 100%;
+}
+.itemDetail_description{
+  
+  width: 100%;
+ padding-top: 10%;
+ padding-left: 10%;
+ padding-right: 1%;
+ padding-top: 10%;
+}
+.itemDetail_description_precio{
+  font-size: 3rem;
+}
+.itemDetail_description_cuota{
+  display: flex;
+  margin-bottom: 5%;
+  font-size: 1.2rem;
+}
+.itemDetail_description_cuota p{
+  padding-left: 2%;
+  color: rgb(1, 136, 1);
+}
+.itemDetail_description_mediosPago{
+  color: rgb(38, 162, 240);
+  margin-bottom: 30%;
+}
+.itemDetail_pago{
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.itemDetail_carrito{
+  height: 50%;
+}
+.itemDetail_carritoInfo{
+  margin-left: 2rem;
+  padding-top: 1rem;
+  color: rgb(1, 136, 1);
+  
+}
+.itemDetail_carritoIcon{
+  margin-left: 2rem;
+  padding-top: 1rem;
+  color: rgb(38, 162, 240);
+}
+.itemDetail_button{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20%;
+ 
+}
+.itemDetail_button button{
+  width: 90%;
+  height: 30%;
+  border: 1px solid rgb(108, 158, 231);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgb(108, 158, 231);
+  cursor: pointer;
+}
+.itemDetail_terminos{
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  margin: 8%;
+  
+}
+.itemDetail_terminos p {
+  color: rgb(148, 143, 143);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  
+  }
+.itemDetail_terminos p h3{
+color: rgb(38, 162, 240);
+}
+.icon_terminos{
+  color: rgb(148, 143, 143);
+}
 
 @media screen and (min-width: 1300px){
   .container_main .item_list {

@@ -6,7 +6,7 @@ import {useState} from "react"
 
 function ItemCount(props) {
 
-const [count, setCount] = useState(props.initial)
+const [count, setCount] = useState(1)
 
 const clickIncrease = () => {
   if(count < props.stock){
@@ -21,18 +21,15 @@ const clickDecrement = () => {
 }
 
   return ( 
-        <>
+        
         <div className='container_count'> 
-        <div className='card_count'>
-        <div className='iconMinus'><FontAwesomeIcon icon={faMinus} onClick={clickDecrement} /></div>
-        <p className='numero'>{count}</p>
-        <div className='iconPlus'><FontAwesomeIcon icon={faPlus} onClick={clickIncrease}/></div>
+          <div className='card_count'>
+            <div className='iconMinus'><FontAwesomeIcon icon={faMinus} onClick={clickDecrement} /></div>
+            <p className='numero'>{count} / {props.stock}</p>
+            <div className='iconPlus'><FontAwesomeIcon icon={faPlus} onClick={clickIncrease}/></div>
+          </div>
         </div>
-        <p>/{props.stock} U. en stock</p>
-        </div>
-         <br />
-        <button className='button_add' onClick={()=>alert('agregar')}>Agregar al carrito</button>
-        </>   
+         
   )
 }
 
