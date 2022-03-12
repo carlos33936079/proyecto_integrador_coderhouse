@@ -1,17 +1,19 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom'
 
 function Item(props) {
-const miOnAdd = () => {}
-console.log(props.name)
+
   return (
-    <div className='container_card'>
-    <div className='container_card_image'>
+    <article className='container_card'>
+      
         <img className="card_image" src={props.image} alt='Imagen'/>
-        <h3>{props.name}</h3>
-    </div>
-   <ItemCount {...props} onAdd={miOnAdd}/>
-    </div>
+        <h2>{props.name}</h2>
+        <p>${props.price}</p>
+        <button>
+          <Link to={`/item/${props.id}`}>Ver detalle</Link>
+        </button>
+      
+    </article>
   )
 }
 

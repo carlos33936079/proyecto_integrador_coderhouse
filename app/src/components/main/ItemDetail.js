@@ -3,14 +3,14 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTruck, faLocationDot, faMapLocationDot, faEarthAmericas, faArrowRotateLeft, faShield, faPercent} from '@fortawesome/free-solid-svg-icons'
 import ItemCount from './ItemCount'
 
+
 function ItemDetail(props) {
 
   let product= props.item
 
 
-
-
   return (
+   
     <div className='itemDetail_container'>
       <div className='itemDetail_foto'>
         <img className='itemDetail_imagenfoto' src={product.image} alt="imagen" />
@@ -19,7 +19,7 @@ function ItemDetail(props) {
         <h2>{product.name}</h2>
         <br />
         <p className='itemDetail_description_precio'>${product.price}</p>
-        <p className='itemDetail_description_cuota'>en {product.cuotas}x ${ Math.trunc( product.price / product.cuotas)} sin interés</p>
+        <p className='itemDetail_description_cuota'>en {product.cuotas} x ${ Math.trunc( product.price / product.cuotas)} sin interés</p>
         
         <p className='itemDetail_description_mediosPago'>Ver los medios de pago</p>
 
@@ -54,6 +54,7 @@ function ItemDetail(props) {
       </div>
       
     </div>
+        
   )
 }
 

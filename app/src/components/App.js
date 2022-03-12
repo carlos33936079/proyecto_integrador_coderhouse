@@ -1,14 +1,17 @@
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
     return (
-        <div>
-        <Header />
-        <Main/>
-        </div>
+        <BrowserRouter>
+            <Header />
+            <Main/>
+            <ToastContainer />
+        </BrowserRouter>
     );
 }
 
