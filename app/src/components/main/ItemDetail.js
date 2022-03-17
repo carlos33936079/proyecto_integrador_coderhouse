@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTruck, faLocationDot, faMapLocationDot, faEarthAmericas, faArrowRotateLeft, faShield, faPercent} from '@fortawesome/free-solid-svg-icons'
 import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom'
 
 
 function ItemDetail(props) {
 
+  const [select, setSelect]= useState(false)
+
   let product= props.item
 
-
+  const onAdd= (unitSelect) =>{
+    if(unitSelect != undefined){
+      setSelect(unitSelect)
+    }
+  }
+    
   return (
    
     <div className='itemDetail_container'>
@@ -18,8 +26,8 @@ function ItemDetail(props) {
       <div className='itemDetail_description'>
         <h2>{product.name}</h2>
         <br />
-        <p className='itemDetail_description_precio'>${product.price}</p>
-        <p className='itemDetail_description_cuota'>en {product.cuotas} x ${ Math.trunc( product.price / product.cuotas)} sin interés</p>
+        <p className='itemDetail_description_precio'>${select ? product.price * select : product.price} {select ? <>x {select}u</> : <>x 1u</> } </p>
+        <p className='itemDetail_description_cuota'>en {product.cuotas} x ${select ?  Math.trunc( product.price * select / product.cuotas) : Math.trunc( product.price / product.cuotas)} sin interés</p>
         
         <p className='itemDetail_description_mediosPago'>Ver los medios de pago</p>
 
@@ -40,12 +48,9 @@ function ItemDetail(props) {
           <div className='itemDetail_carritoInfo'><h3><FontAwesomeIcon icon={faEarthAmericas}/> Retira en:</h3>
             <p className='itemDetail_carritoIcon'><FontAwesomeIcon icon={faMapLocationDot}/> ver mapa</p>
           </div>
-          <ItemCount  {...product}/>
+          {select ? <Link to="/carrito"><button className='button_terminarCompra'>Terminar compra</button></Link> : <ItemCount onAdd={onAdd} {...product}/>}
         </div>
-        <div className='itemDetail_button'>
-          <button>Comprar ahora</button>
-          <button>Agregar al carrito</button>
-        </div>
+       
         <div className='itemDetail_terminos'>
           <h3><FontAwesomeIcon className='icon_terminos' icon={faArrowRotateLeft}/> Devolucón gratis. </h3><p>Tenés 30 días desde que lo recibís.</p>
           <h3><FontAwesomeIcon className='icon_terminos' icon={faShield}/> Compra Protegida. </h3><p>Recibí el producto que esperabas o te devolvemos tu dinero.</p>

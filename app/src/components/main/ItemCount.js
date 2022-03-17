@@ -15,20 +15,28 @@ const clickIncrease = () => {
 }
 
 const clickDecrement = () => {
-  if(count > 0){
-    setCount(count - 1)
+  if(count > props.initial){
+    setCount(count - 1) 
   }
 }
 
+const handleAgregar =()=>{
+  props.onAdd(count)
+}
+
   return ( 
-        
-        <div className='container_count'> 
+    <>
+       <div className='container_count'> 
           <div className='card_count'>
             <div className='iconMinus'><FontAwesomeIcon icon={faMinus} onClick={clickDecrement} /></div>
             <p className='numero'>{count} / {props.stock}</p>
             <div className='iconPlus'><FontAwesomeIcon icon={faPlus} onClick={clickIncrease}/></div>
-          </div>
+          </div>  
         </div>
+        <div className='itemDetail_button'>  
+          <button onClick={handleAgregar} >Agregar Unidades</button>
+        </div>
+    </>
          
   )
 }
