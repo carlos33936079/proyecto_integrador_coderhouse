@@ -7,7 +7,7 @@ import UseWindowDimensions from '../hook/UseWindowDimensions';
 function NavBar() {
 
     const { width } = UseWindowDimensions();
-    let responsive = width<1300 ? true : false
+    let responsive = width<1786 ? true : false
     
     return (       
         <>

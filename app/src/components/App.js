@@ -1,17 +1,20 @@
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from 'react-router-dom';
+import { CartContextProvider } from './context/CartContext';
 
 function App() {
     return (
-        <BrowserRouter>
-            <Header />
-            <Main/>
-            <ToastContainer />
-        </BrowserRouter>
+        <CartContextProvider>
+            <BrowserRouter>
+                <Header />
+                <Main/>
+                <ToastContainer />
+            </BrowserRouter>
+        </CartContextProvider>
     );
 }
 

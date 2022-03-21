@@ -49,7 +49,7 @@ promesa
 
 
   return (
-    <>
+    <div className='container_itemList'>
     <div className='category_menu' onClick={handleClick}>Cartegoria:
     {open ? <Categorias/>: ""}
     </div>
@@ -57,7 +57,7 @@ promesa
     
         <ItemList loading={loading} item={productos}/>
     
-    </>
+    </div>
   )
 }
 
