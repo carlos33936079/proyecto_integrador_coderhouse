@@ -14,7 +14,7 @@ function ItemDetail(props) {
   const [select, setSelect]= useState(false)
 
   const onAdd= (unitSelect) =>{
-    if(unitSelect != undefined){
+    if(unitSelect !== undefined){
       setSelect(unitSelect)
     }
   }
