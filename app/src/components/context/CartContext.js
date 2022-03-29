@@ -7,24 +7,23 @@ export const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([]) 
     const [totalUnit, setTotalUnit] = useState(0)
     const [totalPrice, setTotalPrice] = useState(0)
-       
+  
     function addItem(product, count) {
         let cartProduct = { product, count };
         let cartAux = [];
-        if (isInCart(product)) {
-            cartProduct = cart.find(item => item.product === product);
+        if (isInCart(product)) { 
+            cartProduct = cart.map(item=>item).find(item=>item.product.id === product.id)  
             cartProduct.count = cartProduct.count + count;
-            cartAux = [...cart];
+            cartAux = [...cart]
         } else {
-            cartAux = [cartProduct, ...cart];
+            cartAux = [cartProduct, ...cart];  
         }
         setCart(cartAux);
-
     }
 
     const removeItem = (product) => {
         if (isInCart(product)){
-            const cartAux = cart.filter(item=> item.product !== product)
+            const cartAux =  cart.map(item=>item).filter(item=> item.product !== product)
             setCart(cartAux)
         }
     }
@@ -36,8 +35,10 @@ export const CartContextProvider = ({children}) => {
     }
 
     const isInCart = (product) => {
-        return cart && cart.some(item=>item.product === product)
-        }
+       if(cart){              
+              return cart.map(item=>item.product).some(item=>item.id===product.id)      
+       }
+    }
 
         useEffect(() => {
             const sumUnit = cart.map(item => item.count).reduce((prev, curr) => prev + curr, 0)

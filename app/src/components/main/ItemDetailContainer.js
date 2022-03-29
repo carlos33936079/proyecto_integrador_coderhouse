@@ -4,6 +4,8 @@ import {useState, useEffect} from "react"
 import { toast } from 'react-toastify'
 import { productList } from './productList'
 import {useParams} from 'react-router-dom'
+import { collection, doc, getDoc } from 'firebase/firestore'
+import { db } from '../Firebase'
 
 
 function ItemDetailContainer() {
@@ -16,7 +18,25 @@ function ItemDetailContainer() {
 
 useEffect(()=>{
 
-const promesa = new Promise((res,rej)=>{
+  const productCollection = collection(db,"products")
+  const documentProduct = getDoc(doc(productCollection, id))
+  documentProduct
+        .then(respuesta=>{
+          const product = {
+            id: respuesta.id,
+            ...respuesta.data()
+          }
+          setProducto(product)
+        })
+        .catch((error404)=>{
+          toast.error('Error al cargar el Producto')
+        })
+        .finally((fin)=>{
+          setLoading(false)   
+        })
+
+},[id])
+/* const promesa = new Promise((res,rej)=>{
 
   setTimeout(() => {
     
@@ -35,8 +55,9 @@ promesa
 .finally((fin)=>{
   setLoading(false)   
 })
-},[id])
-
+},[id]) */
+/*  console.log("detalle")
+console.log(producto)  */
 
   return (
     <div className='itemDetailContainer_container'>

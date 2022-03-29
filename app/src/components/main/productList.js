@@ -110,3 +110,5 @@ category: "memory",
 description: ['Tarjeta MicroSDHC.', 'Su velocidad de lectura es de 80MB/s.', 'Posee adaptador de memoria.', 'Su resolución máxima de video es Full HD', 'Almacena diferentes tipos de datos.', 'Clase de velocidad: 10.']
 },
   ]
+
+
