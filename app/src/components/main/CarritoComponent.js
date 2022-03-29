@@ -17,7 +17,7 @@ function CarritoComponent({product, count, remove}) {
                 <span>x{count}</span>
             </div>
             <div className='price_item_carrito'>
-                <span>${product.price}</span>
+                <span>${product.price * count}</span>
             </div>
             <div className='quit_item_carrito'>
                 <p className='button_quit_item_carrito' onClick={()=>remove(product)}><FontAwesomeIcon icon={faX}/></p>

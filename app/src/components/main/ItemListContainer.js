@@ -5,6 +5,8 @@ import { toast } from 'react-toastify'
 import Categorias from './Categorias'
 import {useParams} from 'react-router-dom'
 import { productList } from './productList'
+import { db } from '../Firebase'
+import { getDocs, collection } from 'firebase/firestore'
 
 
 
@@ -20,6 +22,15 @@ const {id} = useParams()
 
 useEffect(()=>{
   setLoading(true)
+
+/*     const productCollection = collection(db,"products")
+    const document = getDocs(collection)
+
+    document
+    .then((respuesta)=>{
+     
+    }) */
+
   const promesa = new Promise((res,rej)=>{
     
     setTimeout(() => {

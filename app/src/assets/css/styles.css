@@ -76,6 +76,11 @@
   right: 10%;
 }
 
+.cart_widgetIcon{
+  text-decoration: none;
+  color: orangered;
+}
+
 .container_main {
 
   text-align: center;
@@ -428,4 +433,25 @@ color: rgb(38, 162, 240);
   font-weight: bolder;
   cursor: pointer;
 }
+
+.button_volverTienda{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: lightseagreen;
+  cursor: pointer;
+}
+
+.noProduct{
+  margin-top: 20px;
+}
+
+.total_carrito{
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+  
 
