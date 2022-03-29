@@ -19,8 +19,6 @@ function ItemDetail(props) {
     }
   }
 
-  
-
   return (
    
     <div className='itemDetail_container'>
