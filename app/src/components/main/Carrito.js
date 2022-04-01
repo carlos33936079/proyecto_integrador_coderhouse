@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import { db } from '../hook/Firebase'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-
+import { toast } from 'react-toastify'
 
 
 function Carrito() {
@@ -24,8 +24,6 @@ function Carrito() {
     setUserState("/user") 
   }
   } , [dataUser])
-/* let cartItems = cart.map(item=>item.product)
-console.log("cart", cartItems.map(item=>item.id)) */
 
   useEffect(() => {
   if (totalUnit>0){
@@ -51,12 +49,13 @@ const handleClick = () => {
 
     const ordersCollection = collection(db, 'orders')
     const order = addDoc(ordersCollection, orderData)
-    console.log(order)
-
+    order.catch((error404)=>{
+      toast.error('Error al cargar el Producto')
+    })
+    
     clear()
   }
 }
-
 
   return (
       <div className='container_carrito'>
@@ -68,7 +67,7 @@ const handleClick = () => {
           <div className='carrito_finalizar_container'>
             <button onClick={clear} className='button_borrarCarrito'>Borrar carrito</button>
             <div className='total_carrito'>Total: ${totalPrice}</div> 
-           <button  className='button_carrito_terminarCompra' onClick={handleClick}><Link to="/carrito/check">Finalizar compra</Link></button> 
+           <button  className='button_carrito_terminarCompra' onClick={handleClick}><Link to={userState}>Finalizar compra</Link></button> 
           </div> 
           : <Link to='/' className='button_volverTienda'>Volver a la tienda</Link>}  
         </div>

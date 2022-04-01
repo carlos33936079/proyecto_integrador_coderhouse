@@ -3,7 +3,7 @@ import ShoppingDetailProduct from './ShoppingDetailProduct'
 
 function ShoppingDetail({ product }) {
 
-  console.log("props", product.id)
+  
     
     
   return (

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function ShoppingDetailProduct({product}) {
 
-console.log("props",product.product.id)
+
 
   return (
     <div className='shopping_description_all'>
