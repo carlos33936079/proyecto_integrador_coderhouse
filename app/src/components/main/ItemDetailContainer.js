@@ -4,14 +4,12 @@ import {useState, useEffect} from "react"
 import { toast } from 'react-toastify'
 import {useParams} from 'react-router-dom'
 import { collection, doc, getDoc } from 'firebase/firestore'
-import { db } from '../Firebase'
-
+import { db } from '../hook/Firebase'
 
 function ItemDetailContainer() {
 
   const [loading, setLoading] = useState(true)
   const [producto, setProducto] = useState([])
-
   const {id} = useParams()
 
 useEffect(()=>{

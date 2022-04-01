@@ -1,6 +1,7 @@
 import React from 'react'
-import NavBar from './headers/NavBar'
-import Logo from './headers/Logo'
+import BrowserCartegoryContainer from './head/BrowserCartegoryContainer'
+import Logo from './head/Logo'
+import Sesion from './head/Sesion'
 
 function Header() {
 
@@ -8,7 +9,8 @@ function Header() {
       <header className='container_header'>
           <div className="navBar">
             <Logo/>
-            <NavBar/>
+            <BrowserCartegoryContainer/>
+            <Sesion/>
           </div>   
       </header> 
   )

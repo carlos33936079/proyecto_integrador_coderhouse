@@ -1,8 +1,0 @@
-sass --watch src/assets/scss/styles.scss src/assets/css/styles.css
-
-
-npm i react-router-dom
-
-
-para alert
-npm i react-toastify

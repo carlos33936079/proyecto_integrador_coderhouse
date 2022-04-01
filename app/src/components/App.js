@@ -5,16 +5,21 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from 'react-router-dom';
 import { CartContextProvider } from './context/CartContext';
+import { UserContextProvider } from './context/UserContext';
+import Footer from './Footer';
 
 function App() {
     return (
-        <CartContextProvider>
-            <BrowserRouter>
-                <Header />
-                <Main/>
-                <ToastContainer />
-            </BrowserRouter>
-        </CartContextProvider>
+        <UserContextProvider>
+            <CartContextProvider>
+                <BrowserRouter>
+                    <Header />
+                    <Main/>
+                    <Footer/>
+                    <ToastContainer />
+                </BrowserRouter>
+            </CartContextProvider>
+        </UserContextProvider> 
     );
 }
 

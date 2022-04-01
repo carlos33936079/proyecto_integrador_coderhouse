@@ -25,19 +25,17 @@ const handleAgregar =()=>{
 }
 
   return ( 
-    <>
+    
        <div className='container_count'> 
           <div className='card_count'>
             <div className='iconMinus'><FontAwesomeIcon icon={faMinus} onClick={clickDecrement} /></div>
             <p className='numero'>{count} / {props.stock}</p>
             <div className='iconPlus'><FontAwesomeIcon icon={faPlus} onClick={clickIncrease}/></div>
           </div>  
-        </div>
-        <div className='itemDetail_button'>  
-          <button onClick={handleAgregar} >Agregar Unidades</button>
-        </div>
-    </>
-         
+          <div className='itemDetail_button'>  
+            <button onClick={handleAgregar} >Agregar Unidades</button>
+          </div>
+        </div> 
   )
 }
 
