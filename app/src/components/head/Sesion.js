@@ -1,13 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
+import UseWindowDimensions from '../hook/UseWindowDimensions';
 import CartWidget from './CartWidget';
+import Menu from './Menu';
+import MenuCompact from './MenuCompact';
 
 function Sesion() {
 
   const [userState, setUserState] = useState(false)
   const { user, signOut, auth, dataUser } = useContext(UserContext)
   const [navegacion, setNavegacion] = useState(false)
+
+  const { width } = UseWindowDimensions(); 
+  let responsive = width<943 ? true : false
 
   useEffect(() => {
   if(user){
@@ -24,18 +29,20 @@ function Sesion() {
       setNavegacion("/user") 
     }
     } , [dataUser])
+
+    const propiedades = {
+     navegacion,
+      auth,
+      signOut,
+      userState,
+    }
   
   return (
     <div className='sesion_container'>
         <div className='sesion_info'>
             <CartWidget/>
         </div>
-        <div className='sesion_sesion'>
-            <ul>
-              <li><Link className='nav_link' to={navegacion}>Mis compras</Link></li>
-              <li>{userState ?<Link className='nav_link' to='/' onClick={()=>signOut(auth)}> Cerrar Sesión</Link>  : <Link className='nav_link' to='/user'> Iniciar Sesión</Link>}</li>
-            </ul>
-        </div>
+        {responsive ? <MenuCompact propiedades={propiedades}/> : <div className='sesion_sesion'><Menu propiedades={propiedades} /></div>}
     </div>
   )
 }

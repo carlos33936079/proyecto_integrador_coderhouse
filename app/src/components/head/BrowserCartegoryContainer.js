@@ -3,6 +3,7 @@ import Browser from './Browser'
 import Category from './Category'
 
 function BrowserCartegoryContainer() {
+
   return (
     <div className='browserCategory_container'>
         <div className='browserCategory_browser'>

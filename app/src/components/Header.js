@@ -6,12 +6,10 @@ import Sesion from './head/Sesion'
 function Header() {
 
   return (
-      <header className='container_header'>
-          <div className="navBar">
+      <header className='container_header'>  
             <Logo/>
             <BrowserCartegoryContainer/>
-            <Sesion/>
-          </div>   
+            <Sesion/> 
       </header> 
   )
 }

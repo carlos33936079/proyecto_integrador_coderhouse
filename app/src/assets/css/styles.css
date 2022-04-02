@@ -10,25 +10,14 @@
 
 .container_header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
   height: 100px;
   background-image: url(../../../public/images/logos/fondo01.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
 
-.navBar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: auto;
-  height: 100%;
-  background: none;
-  
 }
 
 .logo_container{
@@ -38,8 +27,7 @@
   align-items: center;
   width: auto;
   height: 100%;
-  background: none;
-  
+  background: none; 
 }
 
 .logo_imagen_container{
@@ -636,8 +624,6 @@ color: rgb(38, 162, 240);
   color: rgb(236, 19, 243);
 }
   
-/*login nuevo-------------------------------------*/
-
 .main__login-register{
  
   text-decoration: none;
@@ -904,6 +890,60 @@ opacity: 0;
   top: 0px;
 }
 
+.menuCompact_icon{
+  z-index: 30;
+  width: 50%;
+  font-size: 20px;
+}
+
+.menuCompact_icon ul, ol{
+  list-style: none;
+}
+
+.menuList_list li .nav_link{
+  color: rgb(54, 54, 54); 
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  margin-right: 50px;
+
+  width: 100%;
+  margin-right: 50px;
+  left: 0;
+  
+}
+
+.menuList_list li .nav_link:hover{
+  color: white;
+  background-color: rgb(227, 108, 231);
+  background-size: 100%;
+}
+
+.menuList_list > li{
+  float: left;
+}
+
+.menuList_list li ul{
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  right: 0px;
+}
+
+.menuList_list li:hover > ul{
+  display: block;
+  background-image: url(../../../public/images/logos/fondo01_menu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15px;
+
+}
+
+.menuList_list li ul li{
+  position: relative;
+}
+
+
 .sesion_sesion{
   margin-top: 8px;
 }
@@ -1018,6 +1058,16 @@ opacity: 0;
   background-color: white;
   border: 1px solid rgb(227, 108, 231, 0.534);
   box-shadow: 0px 0px 10px rgb(227, 108, 231);
+}
+
+.shopping_cargando{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+ margin-top: 50px;
 }
 
 .shopping_title{

@@ -25,8 +25,8 @@ function Category() {
                     <li><Link to='/category/vehiculos' className='category_link'>Veiculos</Link>
                         <ul>
                             <li><Link to='/category/sub?init=vehiculo_accesorios' className='category_link'>Accesorios</Link></li>
-                            <li><Link to='' className='category_link'>Autos</Link></li>
-                            <li><Link to='' className='category_link'>Motos</Link></li>
+                            <li><Link to='/category/sub?init=auto' className='category_link'>Autos</Link></li>
+                            <li><Link to='/category/sub?init=motos' className='category_link'>Motos</Link></li>
                         </ul>
                     </li>
                     <li><Link to='/category/all' className='category_link'>Todos los productos</Link></li>    

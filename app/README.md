@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# E-Commerce Project
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###Project description:
 
-## Available Scripts
+This project consists of an E-commerce developed with React.js and libraries that will be detailed later.
+The project is only Front End and it is fully functional in all its proposed components (product details, shopping cart, user registration, login, view previous purchases, database connection)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+###Libraries and Frameworks:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
++ React.js (v17.0.2)
++ Font Awesome for React (v0.1.17)
++ react-router-dom (v6.2.2)
++ react-toastify (v8.2.0)
++ firebase (v9.6.10)
++ algoliasearch (v4.13.0)
++ react-slideshow-image (v3.7.0")
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+###Implementation:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React.js: It was used as the application development interface.
 
-### `npm run build`
+Font Awesome for React: Library of icons for the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React-router-dom: npm package that allowed to implement dynamic routing in the web application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React-toastify: It was used for pop-up notifications to users.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Firebase: It was used as a database environment and user authentication.
 
-### `npm run eject`
+Algoliasearch: Integration in conjunction with Firebase as a dynamic free text search engine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React-slideshow-image: Library used for the creation of the slides of the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CSS: Libraries for the style sheet were not implemented.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Link del Proyecto](https://github.com/carlos33936079/proyecto_integrador_coderhouse)
+[Link repositorio personal](https://github.com/carlos33936079)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/023c9871-e0fd-4c1f-aecd-b8db885da765/deploy-status)](https://app.netlify.com/sites/taupe-unicorn-fc5361/deploys)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+[Link de la pagina](https://taupe-unicorn-fc5361.netlify.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Imagen](./public/images/logos/image_referencia.jpg)
 
-### Analyzing the Bundle Size
+![Imagen](./public/images/logos/image_referencia02.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Imagen](./public/images/logos/image_referencia03.jpg)
 
-### Making a Progressive Web App
+![Imagen](./public/images/logos/image_referencia04.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Imagen](./public/images/logos/image_referencia05.jpg)
 
-### Advanced Configuration
+![Imagen](./public/images/logos/image_referencia06.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+###Install:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Open Git Bash.
 
-### `npm run build` fails to minify
+2. Change the current working directory to the location where you want to clone the directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Type `git clone`, and then paste the URL you copied earlier.
+~~~
+$ git clone https://github.com/carlos33936079/proyecto_integrador_coderhouse
+~~~
+4. Hit Enter to create your local clone.
+~~~
+$ git clone https://github.com/carlos33936079/proyecto_integrador_coderhouse
+> Cloning into `Spoon-Knife`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+~~~
+5. Install the necessary repository dependencies. On the command line, run the following command:
+~~~
+npm install
+~~~
+6. 
+Start the repository. On the command line, run the command:
+~~~
+npm start
+~~~

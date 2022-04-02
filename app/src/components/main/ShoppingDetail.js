@@ -2,10 +2,7 @@ import React from 'react'
 import ShoppingDetailProduct from './ShoppingDetailProduct'
 
 function ShoppingDetail({ product }) {
-
   
-    
-    
   return (
     <div className='shopping_description_detail'>
         <div className='shopping_description_detail_product'>
@@ -13,10 +10,8 @@ function ShoppingDetail({ product }) {
                 <div>Factura N° {product.id}</div>
                 <div>Total: ${product.total}</div>
             </div>
-            {product.items.map((item,i) => <ShoppingDetailProduct key={i} product={item} />)}
-            
+            {product.items.map((item,i) => <ShoppingDetailProduct key={i} product={item} />)}        
         </div>
-
     </div>
   )
 }
